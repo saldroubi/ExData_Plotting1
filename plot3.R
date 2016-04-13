@@ -26,7 +26,7 @@ e <- filter(e,Date_Time_Pos >= as.POSIXct("2007-02-01 00:00:00",tz="GMT"),  Date
 #par(mfrow=c(1,1),mar=c(2,2,2,2),oma=c(0,0,0,0))
 
 # Generate plot
-with(e,plot(Date_Time_Pos,Global_active_power,type="n",ylim=c(0,38),ylab="Global Active Power (killowatts)",xlab=""))
+with(e,plot(Date_Time_Pos,Global_active_power,type="n",ylim=c(0,38),ylab="Energy sub metering",xlab=""))
 
 with(e,points(Date_Time_Pos,Sub_metering_1,col="black",type="l"))
 with(e,points(Date_Time_Pos,Sub_metering_2 ,col="red",type="l"))

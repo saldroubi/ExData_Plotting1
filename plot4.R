@@ -27,14 +27,14 @@ e <- filter(e,Date_Time_Pos >= as.POSIXct("2007-02-01 00:00:00",tz="GMT"),  Date
 par(mfrow=c(2,2))#,mar=c(4,4,2,1),oma=c(0,0,2,0))
 
 # Plot 1,1
-with(e,plot(Date_Time_Pos,Global_active_power,type="l",ylab="Global Active Power",xlab=""))
+with(e,plot(Date_Time_Pos,Global_active_power,cex.lab=.80,type="l",ylab="Global Active Power",xlab=""))
 
 
 # Plot 1,2
-with(e,plot(Date_Time_Pos,Voltage,type="l",ylab="Voltage",xlab="datetime"))
+with(e,plot(Date_Time_Pos,Voltage,cex.lab=.80,type="l",ylab="Voltage",xlab="datetime"))
 
 # Plot 1,3
-with(e,plot(Date_Time_Pos,Global_active_power,type="n",ylim=c(0,38),ylab="Global Active Power (killowatts)",xlab=""))
+with(e,plot(Date_Time_Pos,Global_active_power,cex.lab=.80,type="n",ylim=c(0,38),ylab="Energy sub metering",xlab=""))
 
 with(e,points(Date_Time_Pos,Sub_metering_1,col="black",type="l"))
 with(e,points(Date_Time_Pos,Sub_metering_2 ,col="red",type="l"))
@@ -52,7 +52,7 @@ legend("topright", # places a legend at the appropriate place
 
 # Plot 1,4
 # Plot 1,1
-with(e,plot(Date_Time_Pos,e$Global_reactive_power,type="l",ylab="Global Active Power",xlab="datetime"))
+with(e,plot(Date_Time_Pos,e$Global_reactive_power,cex.lab=.80,type="l",ylab="Global Active Power",xlab="datetime"))
 
 
 # Generate file
